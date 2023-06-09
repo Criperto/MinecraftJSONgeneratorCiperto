@@ -19,9 +19,10 @@ body {
     border: none;
     color: antiquewhite;
     padding: 10px 5px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin: 5px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
     display: inline-flex;
     justify-content: auto;
     align-items: auto;
@@ -36,16 +37,20 @@ body {
 .button-container-1 {
     text-align: center;
     padding: 5px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .button-container {
     background-color: #008a1c;
     color: antiquewhite;
     padding: 10px 15px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin: 5px;
-    margin-top: 5px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
@@ -59,14 +64,6 @@ body {
     background-color: #e92f2f;
     color: darkslategray;
 }
-
-.form-group {
-      margin-bottom: 10px;
-      margin-top: 10px;
-      text-align: center;
-      color: lightgray;
-    }
-
 
 .youtube-button {
       display: inline-block;
@@ -96,7 +93,10 @@ body {
       }
 
 #json-output {
-      margin: 10px 400px;
+      margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
       padding: 10px;
       background-image: url("assets/fondo1.png");
       background-size: auto;
@@ -153,6 +153,10 @@ label {
 .form-group {
     background-color: #008a1c;
     padding: 2.5px;
-    margin: 10px 650px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
     border-radius: 6px;
 }
