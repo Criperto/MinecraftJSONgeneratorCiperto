@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Text JSON for Minecraft</title>
+     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/icono.png">
+
+    <meta charset="utf-8"/>
+</head>
+<body>
+  <h1>Generador de Texto JSON para Minecraft</h1>
+    <h3>Introduce el texto:</h3>
+  <div class="form-group">
+    <label for="text-input">Texto:</label>
+    <input type="text" id="text-input" />
+  </div>
+    <h3>Introduce el color:</h3>
+  <div class="form-group">
+    <label for="color-select">Color:</label>
+    <select id="color-select">
+      <option value="black">Negro</option>
+      <option value="dark_blue">Azul Oscuro</option>
+      <option value="dark_green">Verde Oscuro</option>
+      <option value="dark_aqua">Cian Oscuro</option>
+      <option value="dark_red">Rojo Oscuro</option>
+      <option value="dark_purple">Púrpura Oscuro</option>
+      <option value="gold">Oro</option>
+      <option value="gray">Gris</option>
+      <option value="dark_gray">Gris Oscuro</option>
+      <option value="blue">Azul</option>
+      <option value="green">Verde</option>
+      <option value="aqua">Cian</option>
+      <option value="red">Rojo</option>
+      <option value="light_purple">Púrpura Claro</option>
+      <option value="yellow">Amarillo</option>
+      <option value="white">Blanco</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="color-hex-input">Color personalizado (hex):</label>
+    <input type="color" id="color-hex-input" value="#000000"/>
+  </div>
+    <h3>Introduce la acción al darle click:</h3>
+  <div class="form-group">
+    <label for="action-select">Acción:</label>
+    <select id="action-select">
+      <option value="none">No hacer nada</option>
+      <option value="run_command">Ejecutar Comando</option>
+      <option value="suggest_command">Sugerir Comando</option>
+      <option value="suggest_text">Sugerir Texto</option>
+      <option value="open_url">Abrir URL</option>
+      <option value="copy_to_clipboard">Copiar Texto al Portapapeles</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="action-text-input">Texto de Acción:</label>
+    <input type="text" id="action-text-input" />
+  </div>
+    <h3>Introduce la accion por encima:</h3>
+<div class="form-group">
+  <label for="hover-select">Acción:</label>
+  <select id="hover-select">
+    <option value="none">no hace nada</option>
+    <option value="show_text">Texto Personalizado</option>
+    <option value="show_achievement">Logro</option>
+    <option value="show_item">Item o Bloque</option>
+  </select>
+</div>
+    <div class="form-group">
+    <label for="hover-text-input">Texto de Acción:</label>
+    <input type="text" id="hover-text-input" />
+  </div>
+    <div class="button-container-1">
+    <a id="bold-button" class="button-container">Negrita</a>
+    <a id="italic-button" class="button-container">Cursiva</a>
+    <a id="underline-button" class="button-container">Subrayado</a>
+    <a id="strikethrough-button" class="button-container">Tachado</a>
+    <a id="obfuscated-button" class="button-container">Obstruido</a>
+    </div>
+  <div id="json-output"></div>
+    <div class="button-container-1">
+    <a id="generate-button" class="button-container-2">Generar JSON</a>
+    <a id="copy-button" class="button-container-2">Copiar Resultado</a>
+    </div>
+    <br/>
+    <h2>Creado por: Criperto<h2>
+        
+        <a class="youtube-button" href="https://www.youtube.com/@Criperto_Oficial" target="_blank">
+    <i class="fab fa-youtube"></i> Criperto
+  </a>
+        <a class="discord-button" href="https://discord.com/invite/ZXJEb6bfhB" target="_blank">
+    <i class="fab fa-discord"></i> Unirse a Discord
+  </a>
+        <a class="github-button" href="https://github.com/Criperto" target="_blank">
+    <i class="fab fa-github"></i> Ir a GitHub
+  </a>
+        <br/>
+        <p>Es la primera ves que creo una pagina web, en algun momento la ire mejorando, espero que les sea util, Gracias.</p>
+
+  <script>
+    var colorSelect = document.getElementById('color-select');
+var colorHexInput = document.getElementById('color-hex-input');
+var actionSelect = document.getElementById('action-select');
+var actionTextInput = document.getElementById('action-text-input');
+var hoverSelect = document.getElementById('hover-select');
+var hoverTextInput = document.getElementById('hover-text-input');
+
+colorSelect.addEventListener('change', function() {
+  if (this.value === 'custom') {
+    colorHexInput.disabled = false;
+  } else {
+    colorHexInput.value = '';
+    colorHexInput.disabled = false;
+  }
+});
+
+document.getElementById('generate-button').addEventListener('click', function() {
+  var text = document.getElementById('text-input').value;
+  var color = document.getElementById('color-select').value;
+  var customColor = document.getElementById('color-hex-input').value;
+  var bold = document.getElementById('bold-button').classList.contains('active');
+  var italic = document.getElementById('italic-button').classList.contains('active');
+  var underline = document.getElementById('underline-button').classList.contains('active');
+  var strikethrough = document.getElementById('strikethrough-button').classList.contains('active');
+  var obfuscated = document.getElementById('obfuscated-button').classList.contains('active');
+  var action = actionSelect.value;
+  var actionText = actionTextInput.value;
+  var hoverAction = hoverSelect.value;
+  var hoverText = hoverTextInput.value;
+
+  var json = {
+    text: text,
+    color: color
+  };
+
+  if (customColor !== '' && customColor !== '#000000') {
+    json.color = customColor;
+  }
+
+  if (bold) {
+    json.bold = true;
+  }
+
+  if (italic) {
+    json.italic = true;
+  }
+
+  if (underline) {
+    json.underlined = true;
+  }
+
+  if (strikethrough) {
+    json.strikethrough = true;
+  }
+
+  if (obfuscated) {
+    json.obfuscated = true;
+  }
+
+  if (action !== 'none' && actionText !== '') {
+    json.clickEvent = {
+      action: action,
+      value: actionText
+    };
+  }
+
+  if (hoverAction !== 'none' && hoverText !== '') {
+    json.hoverEvent = {
+      action: hoverAction,
+      contents: hoverText
+    };
+  }
+
+  var jsonString = JSON.stringify(json, null, 2);
+
+  document.getElementById('json-output').textContent = jsonString;
+});
+
+// Event listeners for style buttons
+document.getElementById('bold-button').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+
+document.getElementById('italic-button').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+
+document.getElementById('underline-button').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+
+document.getElementById('strikethrough-button').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+
+document.getElementById('obfuscated-button').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
+
+document.getElementById('copy-button').addEventListener('click', function() {
+  var jsonOutput = document.getElementById('json-output').textContent;
+
+  navigator.clipboard.writeText(jsonOutput)
+    .then(function() {
+      alert('¡El resultado se ha copiado al portapapeles!');
+    })
+    .catch(function(error) {
+      console.error('Error al copiar el resultado:', error);
+    });
+});
+ 
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>
