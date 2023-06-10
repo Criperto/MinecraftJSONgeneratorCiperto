@@ -129,47 +129,47 @@ document.getElementById('generate-button').addEventListener('click', function() 
   var hoverText = hoverTextInput.value;
 
   var json = {
-    text: text,
-    color: color
-  };
+text: text,
+color: color
+};
 
   if (customColor !== '' && customColor !== '#000000') {
-    json.color = customColor;
-  }
+json.color = customColor;
+}
 
   if (bold) {
-    json.bold = true;
-  }
+json.bold = true;
+}
 
   if (italic) {
-    json.italic = true;
-  }
+json.italic = true;
+}
 
   if (underline) {
-    json.underlined = true;
-  }
+json.underlined = true;
+}
 
   if (strikethrough) {
-    json.strikethrough = true;
-  }
+json.strikethrough = true;
+}
 
   if (obfuscated) {
-    json.obfuscated = true;
-  }
+json.obfuscated = true;
+}
 
   if (action !== 'none' && actionText !== '') {
-    json.clickEvent = {
-      action: action,
-      value: actionText
-    };
-  }
+json.clickEvent = {
+action: action,
+value: actionText
+};
+}
 
-  if (hoverAction !== 'none' && hoverText !== '') {
-    json.hoverEvent = {
-      action: hoverAction,
-      contents: hoverText
-    };
-  }
+  if (hoverAction !== 'none' && hoverText !== ''){
+json.hoverEvent = {
+action: hoverAction,
+contents: hoverText
+};
+}
 
   var jsonString = JSON.stringify(json, null, 2);
 
