@@ -10,19 +10,6 @@ body {
     src: url('assets/Minecraft3.otf') format('opentype');
 }
 
-/* Estilos generales */
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 767px) {
-  /* Estilos específicos para dispositivos móviles */
-}
-
-/* Estilos para pantallas más grandes (versión de escritorio) */
-@media (min-width: 768px) {
-  /* Estilos específicos para la versión de escritorio */
-}
-
-
 .a {
     text-align: center;
 }
