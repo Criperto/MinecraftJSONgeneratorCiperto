@@ -1,3 +1,6 @@
+/* PC desing*/
+@media screen and (min-width: 700px){
+
 body {
   font-family: Arial, sans-serif;
   background-image: url(assets/fondo2.png);
@@ -185,4 +188,211 @@ label {
     width: 50%;
     text-align: center;
     border-radius: 6px;
+}
+    
+} 
+
+/* PC desing*/
+
+/* Movile desing*/
+
+@media screen and (max-width: 700px) {
+    
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(assets/fondo3.png);
+    background-position: center;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'minecraft';
+    src: url('assets/Minecraft3.otf') format('opentype');
+}
+
+.a {
+    text-align: center;
+}
+    
+#json-output {
+      margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+      padding: 10px;
+      background-image: url("assets/fondo2.png");
+      background-size: auto;
+      background-position: center;
+      border: 5px solid #ddd;
+      white-space: pre-wrap;
+      color: white;
+    }
+    
+.button-container-2 {
+    background-color: #008a1c;
+    border: none;
+    color: antiquewhite;
+    padding: 10px;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 200px; /* Ajusta el ancho máximo según tus necesidades */
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'minecraft';
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+
+
+.button-container-2:hover {
+    background-color: #00bd26;
+    color: whitesmoke;
+}
+
+.button-container:hover {
+    background-color: #00bd26;
+    color: whitesmoke;
+}
+
+.button-container-1 {
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+    width: 95%;
+    white-space: nowrap;
+    overflow-x: auto;
+    border-radius: 5px;
+}
+
+.button-container {
+    background-color: #008a1c;
+    color: antiquewhite;
+    padding: 10px 15px;
+    margin: 10px;
+    margin-bottom: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 70%;
+    min-width: 50%;
+    min-height: 40%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.5s ease,color 0.3s ease;
+    font-family: 'minecraft';
+    cursor: pointer;
+}
+
+.active {
+    background-color: #e92f2f;
+    color: darkslategray;
+}
+
+.active:hover {
+    background-color: #ff8080;
+    color: darkslategrey;
+}
+
+.youtube-button {
+      display: inline-block;
+      padding: 10px;
+      background-color: #ff0000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+      
+    .discord-button {
+      display: inline-block;
+      padding: 10px;
+      background-color: #7289DA;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+      
+    .github-button {
+      display: inline-block;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      }
+
+#json-output {
+      margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+      padding: 10px;
+      background-image: url("assets/fondo1.png");
+      background-size: auto;
+      background-position: center;
+      border: 5px solid #ddd;
+      white-space: pre-wrap;
+      color: white;
+    }
+
+h1 {
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+    font-family: 'minecraft';
+}
+
+h2 {
+  color: antiquewhite;
+  font-size: 17px;
+  text-align: center;
+    font-family: 'minecraft';
+}
+
+h3 {
+  color: oldlace;
+  font-size: 24px;
+  text-align: center;
+    font-family: monospace;
+}
+
+p {
+  color: white;
+  line-height: 1.5;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #008a1c;
+    border: 3px solid #008a1c;
+}
+
+label {
+    color: white;
+    font-family: 'minecraft';
+}
+
+.form-group {
+    background-color: #008a1c;
+    padding: 2.5px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    text-align: center;
+    border-radius: 6px;
+}
+    
 }
