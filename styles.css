@@ -235,7 +235,7 @@ body {
     padding: 10px;
     margin: 10px auto;
     width: 100%;
-    max-width: 200px;
+    max-width: 200px; /* Ajusta el ancho máximo según tus necesidades */
     display: block;
     text-align: center;
     text-decoration: none;
@@ -397,5 +397,3 @@ label {
 }
     
 }
-
-/* By Criperto */
