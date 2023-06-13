@@ -1,5 +1,5 @@
 /* PC desing*/
-@media screen and (min-width: 700px){
+@media screen and (min-width: 767px){
 
 body {
   font-family: Arial, sans-serif;
@@ -196,7 +196,7 @@ label {
 
 /* Movile desing*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 767px) {
     
 body {
   font-family: Arial, sans-serif;
