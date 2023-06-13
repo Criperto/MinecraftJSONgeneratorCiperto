@@ -3,7 +3,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url(assets/fondo2.png);
+  background-image: url(assets/fondo2.webp);
     background-position: center;
     background-size: cover;
 }
@@ -127,7 +127,7 @@ body {
     margin-right: auto;
     width: 65%;
       padding: 10px;
-      background-image: url("assets/fondo1.png");
+      background-image: url("assets/fondo1.webp");
       background-size: auto;
       background-position: center;
       border: 5px solid #ddd;
@@ -200,7 +200,7 @@ label {
     
 body {
   font-family: Arial, sans-serif;
-  background-image: url(assets/fondo3.png);
+  background-image: url(assets/fondo3.webp);
     background-position: center;
     background-size: cover;
 }
@@ -220,7 +220,7 @@ body {
     margin-right: auto;
     width: 65%;
       padding: 10px;
-      background-image: url("assets/fondo2.png");
+      background-image: url("assets/fondo2.webp");
       background-size: auto;
       background-position: center;
       border: 5px solid #ddd;
@@ -260,11 +260,12 @@ body {
 
 .button-container-1 {
     text-align: center;
-    padding: 5px;
-    margin: auto;
+    padding: 10px 15px;
+    margin: auto 10%;
     width: 95%;
     white-space: nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
     border-radius: 5px;
 }
 
@@ -332,7 +333,7 @@ body {
     margin-right: auto;
     width: 65%;
       padding: 10px;
-      background-image: url("assets/fondo1.png");
+      background-image: url("assets/fondo1.webp");
       background-size: auto;
       background-position: center;
       border: 5px solid #ddd;
