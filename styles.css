@@ -260,8 +260,8 @@ body {
 
 .button-container-1 {
     text-align: center;
-    padding: 10px 15px;
-    margin: auto 10%;
+    padding: 10px 10px;
+    margin: auto;
     width: 95%;
     white-space: nowrap;
     overflow-x: auto;
