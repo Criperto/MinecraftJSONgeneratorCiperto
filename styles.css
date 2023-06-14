@@ -413,5 +413,14 @@ label {
     text-align: center;
     border-radius: 6px;
 }
+  
+ .more-button {
+      display: inline-block;
+      padding: 10px;
+      background-color: #008a1c;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
     
 }
